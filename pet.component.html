@@ -1,0 +1,17 @@
+<h1>Pet prolife</h1>
+<p>
+  <a>Pet name:</a>
+  <input [value]="nameImage" (change)="setNameImage($event.target.value)">
+</p>
+<p>
+  <a>Pet image:</a>
+  <input [value]="urlImage" (change)="setUrlImage($event.target.value)">
+</p>
+<h1>Pet name: {{nameImage}}</h1>
+<!--<iframe [src]="urlImage" width="500px" height="500px"></iframe>-->
+<!--<img [src]="urlImage" style="max-width: 100%">-->
+<!--<iframe width="813" height="457" src={{urlImage}}></iframe>-->
+<!--<img src="{{urlImage}}" width="813" height="457">-->
+<!--<video src="{{urlImage}}" height="813" width="457"></video>-->
+<!--<source style="height: 500px;width: 200px" src="{{urlImage}}">-->
+<iframe width="813" height="457" [src]="urlImage | safe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
